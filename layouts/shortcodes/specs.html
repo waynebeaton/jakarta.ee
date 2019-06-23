@@ -13,7 +13,7 @@
 
     <div class="news-list">
       <div class="news-list-col">
-  {{ range .Page.Sections}}
+  {{ range .Page.Sections.ByWeight}}
           <div class="news-list-media">
             <a href="{{- with .Params.link | default .RelPermalink }} {{.}} {{- end }}" class="media media-link">
             <h4 class="media-heading">{{ .Title }}</h4>
